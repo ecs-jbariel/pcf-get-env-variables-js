@@ -1,0 +1,7 @@
+{
+    "protocol": "http",
+    "host": "api.bosh-lite.com",
+    "username": "admin",
+    "password": "admin",
+    "skipSSLValidation": "false"
+}

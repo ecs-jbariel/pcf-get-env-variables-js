@@ -1,0 +1,25 @@
+{
+  "name": "pcf-get-env-variables-js",
+  "version": "1.0.0",
+  "description": "NodeJS app to load the env variables for a given application name",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ecs-jbariel/pcf-get-env-variables-js.git"
+  },
+  "author": "Jarrett Bariel <jbariel@ecsteam.com> (http://www.ecsteam.com)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/ecs-jbariel/pcf-get-env-variables-js/issues"
+  },
+  "homepage": "https://github.com/ecs-jbariel/pcf-get-env-variables-js#readme",
+  "dependencies": {
+    "js-cfclient": "^1.0.1"
+  },
+  "devDependencies": {
+    "xtend": "^4.0.1"
+  }
+}
