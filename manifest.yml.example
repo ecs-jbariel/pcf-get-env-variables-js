@@ -1,0 +1,17 @@
+---
+domain: <app domain>
+applications:
+- name: pcf-get-env-variables-js
+  host: pcf-env-variables
+  memory: 128M
+  disk_quota: 64M
+  buildpack: https://github.com/cloudfoundry/nodejs-buildpack
+  instances: 2
+  path: ./server/
+  env:
+    APP_NAME: pcf-get-env-variables-js
+    API_PROTOCOL: https
+    API_HOST: api.<systemDomain>
+    API_USERNAME: admin
+    API_PASSWORD: <adminPassword>
+    SKIP_SSL_VALIDATION: <true|false>
