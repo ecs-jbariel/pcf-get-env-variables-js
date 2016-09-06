@@ -13,7 +13,11 @@ function start(port, client, appName) {
 
     __server = http.createServer((request, response) => {
         var reqContext = request.url.substr(1);
-        if ('favicon.ico' != reqContext) {
+        if (!reqContext) {
+            writeResponse(response, 200, 'I am alive...');
+        } else if ('favicon.ico' == reqContext) {
+            writeResponse(response, 200, '');
+        } else {
             if (__appName == reqContext) {
                 writeResponse(response, 404, "Could not find app with name '" + reqContext + "'");
             } else {
@@ -36,8 +40,6 @@ function start(port, client, appName) {
                     writeResponse(response, 500, 'Check logs, could not get request');
                 });
             }
-        } else {
-            writeResponse(response, 200, '');
         }
     }).on('close', () => {
         O.i('Server closed...');
