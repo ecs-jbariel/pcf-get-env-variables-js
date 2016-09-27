@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/ecs-jbariel/pcf-get-env-variables-js#readme",
   "dependencies": {
-    "js-cfclient": "^1.0.1"
+    "js-cfclient": "^1.1.0"
   },
   "devDependencies": {
     "xtend": "^4.0.1"
