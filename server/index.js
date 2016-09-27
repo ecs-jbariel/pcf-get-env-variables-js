@@ -17,5 +17,5 @@ const CfClient = new CF.CFClient(new CF.CFConfig({
 }));
 
 CfClient.connect().then(() => {
-    require('./server').start(process.env.PORT || 8888, CfClient, process.env.APP_NAME || '');
+    require('./server').start(process.env.PORT || 8888, CfClient, process.env.APP_NAMES || []);
 }, O.e);

@@ -2,14 +2,14 @@ var http = require('http');
 
 var __server;
 var __CfClient;
-var __appName;
+var __appNames;
 
 /**
  * Start the server
  */
-function start(port, client, appName) {
+function start(port, client, appNames) {
     __CfClient = client;
-    __appName = appName;
+    __appNames = appNames;
 
     __server = http.createServer((request, response) => {
         var reqContext = request.url.substr(1);
@@ -18,7 +18,7 @@ function start(port, client, appName) {
         } else if ('favicon.ico' == reqContext) {
             writeResponse(response, 200, '');
         } else {
-            if (__appName == reqContext) {
+            if (__appNames.includes(reqContext)) {
                 writeResponse(response, 404, "Could not find app with name '" + reqContext + "'");
             } else {
                 O.d("Request for: '" + reqContext + "'");

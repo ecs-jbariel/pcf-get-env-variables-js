@@ -4,7 +4,7 @@ Simple NodeJS app that will display the environment variables for a given applic
 ## Required Environment Variables for a PCF Deploy
 If you are deploying this into PCF, you must provide the following environment variables.
 
-* `APP_NAME` => Name of this app, so it will not show the environment variables (especially as there are admin credentials)
+* `APP_NAMES` => Name(s) of app(s), to not show the environment variables for (especially as there are admin credentials)  Provided as an array such as `['frank','joe','bob']`
 * `API_PROTOCOL` => `http` or `https`
 * `API_HOST` => Set to the API endpoint - typically `api.<systemDomain>`
 * `API_USERNAME` => Set to an API admin, typically `admin`
